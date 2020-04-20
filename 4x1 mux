@@ -1,0 +1,22 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+
+Entity eCoklayici4_1 is
+
+Port (	  a,b,c,d : in  std_logic;
+                s : in  std_logic_vector(1 downto 0);
+	    	        g : out std_logic);
+End eCoklayici4_1;
+
+Architecture Mux of eCoklayici4_1 is
+
+Begin
+		
+	g  <= 	a when  s="00" else
+	      	b when  s="01" else
+		      c when  s="10" else
+	 	      d when  s="11" ;
+		
+			
+
+End Mux;
